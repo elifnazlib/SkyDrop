@@ -17,7 +17,7 @@ public class Score : MonoBehaviour
         else if (collision.CompareTag("Parrot"))
         {
             Destroy(collision.gameObject);
-            score += 10;
+            score += 100;
             scoreText.text = score.ToString();
             Debug.Log("Score: " + score);
         }
@@ -27,10 +27,10 @@ public class Score : MonoBehaviour
             Destroy(collision.gameObject);
             scoreText.text = score.ToString();
 
-            if (score <= 20)
+            if (score <= 50)
                 score = 0;
             else
-                score -= 20;
+                score -= 50;
 
             scoreText.text = score.ToString();
             Debug.Log("Score: " + score);

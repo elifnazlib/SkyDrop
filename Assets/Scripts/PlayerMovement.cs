@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         move = transform.position + playerSpeed * Time.deltaTime * move;
-        move.x = Mathf.Clamp(move.x, -8.6f, 8.6f);
+        move.x = Mathf.Clamp(move.x, -8.3f, 8.3f);
         transform.position = move;
     }
 }
