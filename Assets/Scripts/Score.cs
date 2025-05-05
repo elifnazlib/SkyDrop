@@ -8,6 +8,13 @@ public class Score : MonoBehaviour
     [SerializeField] GameObject[] hearts;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] GameOver _gameOverScript;
+    [SerializeField] AudioClip [] audioClip;
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,6 +23,8 @@ public class Score : MonoBehaviour
 
         else if (collision.CompareTag("Parrot"))
         {
+            audioSource.PlayOneShot(audioClip[0]);
+
             Destroy(collision.gameObject);
             score += 100;
             scoreText.text = score.ToString();
@@ -24,6 +33,8 @@ public class Score : MonoBehaviour
 
         else if (collision.CompareTag("Bomb"))
         {
+            audioSource.PlayOneShot(audioClip[1], 5f);
+
             Destroy(collision.gameObject);
             scoreText.text = score.ToString();
 
