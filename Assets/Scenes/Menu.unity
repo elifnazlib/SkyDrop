@@ -1521,7 +1521,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Try yout best to get the highest score! Parrots give you points while bombs
+  m_text: Try your best to get the highest score! Parrots give you points while bombs
     decrease your points and lives.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
