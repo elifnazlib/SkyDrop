@@ -8,11 +8,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private SpriteRenderer playerSpriteRenderer;
     private string lookingAt = "right";
 
-    void Start()
-    {
-        animator.speed = 2f;
-    }
-
     void Update()
     {
         Vector3 move = Vector3.zero;
